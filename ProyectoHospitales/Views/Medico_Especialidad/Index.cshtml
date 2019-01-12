@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProyectoHospitales.Medico_Especialidad>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Especialidades.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Medicos.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Especialidades.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medicos.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_MedicoEspecialidad }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_MedicoEspecialidad }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_MedicoEspecialidad })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<ProyectoHospitales.Medicos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de Medicos</h2>
+
+
+<p>
+    @Html.ActionLink("Create New Doctor", "Create")
+    @using (Html.BeginForm())
+    {
+    <p>
+        Cedula: @Html.DropDownList("SearchString", new SelectList(ViewBag.cedulas)) <br />
+        <input type="submit" value="Filtrar" />
+    </p>
+    }
+   </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sector)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C__Residencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ciudad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sector)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Calle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.C__Residencia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID_Medico }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID_Medico }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID_Medico })
+                </td>
+            </tr>
+        }
+
+    </table>

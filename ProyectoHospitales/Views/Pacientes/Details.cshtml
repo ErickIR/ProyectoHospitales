@@ -1,0 +1,146 @@
+﻿@model ProyectoHospitales.Pacientes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles Medico</h2>
+
+<div>
+    <h4>Pacientes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sector)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sector)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Calle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C__Residencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C__Residencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dia_Nacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dia_Nacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mes_Nacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mes_Nacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano_Nacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ano_Nacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NSS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NSS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Sangre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Sangre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Paciente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
